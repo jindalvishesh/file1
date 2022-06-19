@@ -1,0 +1,8 @@
+def linearSearch(list1,key): for i in range(len(list1)):
+if key == list1[i]:
+print('element is found at index',i) break
+else:
+print('element is not found')
+
+list1 = [1,2,3,4,5]
+linearSearch(list1,2)
