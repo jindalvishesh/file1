@@ -1,0 +1,17 @@
+flag = False
+def binarySearch(arr, low, high, x): if high >= low:
+
+mid = (high + low) // 2 if arr[mid] == x:
+return mid flag = True
+
+elif arr[mid] > x:
+return binarySearch(arr, low, mid - 1, x) else:
+return binarySearch(arr, mid + 1, high, x)
+else:
+flag = False arr = [2, 3, 4, 10, 40]
+arr.sort() key = 10
+result = binarySearch(arr, 0, len(arr)-1, key)
+
+if result:
+print("Element is present at index", str(result)) else:
+print("Element is not present")
